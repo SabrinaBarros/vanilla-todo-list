@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>ToDo List</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="normalize.css"/>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<body>
+  <head>
+    <title>ToDo List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
 
-  <h1 class="card__title">Tasks</h1>
-  <span class="card__counter">1/3</span>
+    <h1 class="card__title">Tasks</h1>
+    <span class="card__counter">1/3</span>
 
-  <ul>
-    <li>
-      <input type="checkbox" id="task_1"/>
-      <label for="task_1">Go to gym</label>
-      <button>X</button>
-    </li>
+    <ul id="ul"></ul>
 
-    <li>
-      <input type="checkbox" id="task_2"/>
-      <label for="task_2">Call for Anne</label>
-      <button>X</button>
-    </li>
+    <label for="input">Type a new task</label>
+    <input type="text" id="input" placeholder="New task..."/>
+    <button id="btn_add">Add</button>
 
-    <li>
-      <input type="checkbox" id="task_3"/>
-      <label for="task_3">Reads personal emails</label>
-      <button>X</button>
-    </li>
-  </ul>
-
-  <label for="new-task">Type a new task</label>
-  <input type="text" id="new-task" placeholder="New task..."/>
-  <button>Add</button>
-
-</body>
+  </body>
+  <script src="./scripts/script.js"></script>
 </html>
