@@ -11,6 +11,7 @@
     count++;
 
     const li = document.createElement('li');
+    li.setAttribute('id', 'row_' + count);
 
     const checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
@@ -22,12 +23,22 @@
 
     const deleteTask = document.createElement('button');
     deleteTask.innerText = 'X';
+    deleteTask.setAttribute('data-ref', 'row_' + count);
 
     li.appendChild(checkbox);
     li.appendChild(label);
     li.appendChild(deleteTask);
 
     ul.appendChild(li);
+
+    deleteTask.addEventListener('click', () => {
+
+      const id = deleteTask.getAttribute('data-ref');
+      const li = document.getElementById(id);
+
+      li.remove();
+
+    });
 
   });
 
