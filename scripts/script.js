@@ -6,9 +6,14 @@
 
   let count = 0;
 
+  let doneTasks = document.getElementById('doneTasks');
+  let totalTasks = document.getElementById('totalTasks');
+
   btn_add.addEventListener('click', () => {
 
     count++;
+
+    totalTasks.innerText++;
 
     const li = document.createElement('li');
     li.setAttribute('id', 'row_' + count);
@@ -37,6 +42,21 @@
       const li = document.getElementById(id);
 
       li.remove();
+
+      if (checkbox.checked) {
+
+        doneTasks.innerText--;
+        totalTasks.innerText--;
+
+      } else {
+        totalTasks.innerText--;
+      };
+
+    });
+
+    checkbox.addEventListener('change', () => {
+
+      checkbox.checked ? doneTasks.innerText++ : doneTasks.innerText--
 
     });
 
